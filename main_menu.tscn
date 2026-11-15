@@ -1,0 +1,61 @@
+[gd_scene format=3 uid="uid://c1dn4sp8g3ohk"]
+
+[ext_resource type="Texture2D" uid="uid://b4dtrfpc8e7ab" path="res://images/main_menu/title-slime.png" id="1_jix8l"]
+[ext_resource type="Texture2D" uid="uid://hxcvpe7nuyjg" path="res://images/main_menu/start-button.png" id="2_glbon"]
+[ext_resource type="Texture2D" uid="uid://bweiod41lr5t" path="res://images/main_menu/about-button.png" id="3_nlkkf"]
+[ext_resource type="Texture2D" uid="uid://cc3wtdsxngr0s" path="res://images/main_menu/prefs-button.png" id="4_qe12f"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_4la4g"]
+atlas = ExtResource("1_jix8l")
+region = Rect2(67.30072, 227.89983, 503.08923, 400.25653)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_1crhd"]
+atlas = ExtResource("2_glbon")
+region = Rect2(525.96204, 231.55692, 749.8877, 178.77072)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_21yf0"]
+atlas = ExtResource("3_nlkkf")
+region = Rect2(518.18256, 335.47864, 761.81744, 188.26294)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_2t3et"]
+atlas = ExtResource("4_qe12f")
+region = Rect2(537.16705, 436.7293, 724.57513, 235.72418)
+
+[node name="MainMenu" type="MarginContainer" unique_id=119407722]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/margin_left = 50
+theme_override_constants/margin_top = 50
+theme_override_constants/margin_right = 50
+theme_override_constants/margin_bottom = 50
+
+[node name="VBoxContainer" type="VBoxContainer" parent="." unique_id=1566594974]
+layout_mode = 2
+
+[node name="HBoxContainer" type="HBoxContainer" parent="VBoxContainer" unique_id=611478595]
+layout_mode = 2
+
+[node name="CenterContainer" type="CenterContainer" parent="VBoxContainer/HBoxContainer" unique_id=1385150273]
+layout_mode = 2
+
+[node name="SlimeIllust" type="TextureRect" parent="VBoxContainer/HBoxContainer/CenterContainer" unique_id=1565372191]
+layout_mode = 2
+texture = SubResource("AtlasTexture_4la4g")
+
+[node name="VBoxContainer" type="VBoxContainer" parent="VBoxContainer/HBoxContainer" unique_id=1073102102]
+layout_mode = 2
+
+[node name="StartButton" type="TextureRect" parent="VBoxContainer/HBoxContainer/VBoxContainer" unique_id=54882714]
+layout_mode = 2
+texture = SubResource("AtlasTexture_1crhd")
+
+[node name="AboutButton" type="TextureRect" parent="VBoxContainer/HBoxContainer/VBoxContainer" unique_id=719125645]
+layout_mode = 2
+texture = SubResource("AtlasTexture_21yf0")
+
+[node name="PrefsButton" type="TextureRect" parent="VBoxContainer/HBoxContainer/VBoxContainer" unique_id=787162771]
+layout_mode = 2
+texture = SubResource("AtlasTexture_2t3et")
