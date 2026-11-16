@@ -1,0 +1,41 @@
+[gd_scene format=3 uid="uid://b38w4kfvwvtj7"]
+
+[ext_resource type="Texture2D" uid="uid://cg36a2v5xc48e" path="res://images/map/button_placeholder.png" id="1_c7s6e"]
+
+[node name="map" type="Node2D" unique_id=898604451]
+
+[node name="Level1Button" type="TextureButton" parent="." unique_id=172780395]
+offset_left = 203.0
+offset_top = 489.0
+offset_right = 1003.0
+offset_bottom = 889.0
+scale = Vector2(0.2, 0.2)
+offset_transform_scale = Vector2(0.5, 0.5)
+texture_normal = ExtResource("1_c7s6e")
+
+[node name="Level2Button" type="TextureButton" parent="." unique_id=1288187002]
+offset_left = 513.0
+offset_top = 202.00003
+offset_right = 1313.0
+offset_bottom = 602.0
+scale = Vector2(0.2, 0.2)
+offset_transform_scale = Vector2(0.5, 0.5)
+texture_normal = ExtResource("1_c7s6e")
+
+[node name="Level3Button" type="TextureButton" parent="." unique_id=15785682]
+offset_left = 888.99994
+offset_top = 201.00003
+offset_right = 1689.0
+offset_bottom = 601.0
+scale = Vector2(0.2, 0.2)
+offset_transform_scale = Vector2(0.5, 0.5)
+texture_normal = ExtResource("1_c7s6e")
+
+[node name="Level4Button" type="TextureButton" parent="." unique_id=1852854318]
+offset_left = 513.0
+offset_top = 479.0
+offset_right = 1313.0
+offset_bottom = 879.0
+scale = Vector2(0.2, 0.2)
+offset_transform_scale = Vector2(0.5, 0.5)
+texture_normal = ExtResource("1_c7s6e")
