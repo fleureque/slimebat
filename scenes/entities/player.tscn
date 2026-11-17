@@ -1,8 +1,107 @@
 [gd_scene format=3 uid="uid://bmenk31tqjd6o"]
 
-[sub_resource type="SpriteFrames" id="SpriteFrames_1crhd"]
+[ext_resource type="Texture2D" uid="uid://da3e1nhaxm1dv" path="res://images/player/attack/Attack-1.png" id="1_5ki56"]
+[ext_resource type="Texture2D" uid="uid://0cqmll4u2p14" path="res://images/player/attack/Attack-2.png" id="2_saib0"]
+[ext_resource type="Texture2D" uid="uid://w2s7jqyw1idp" path="res://images/player/attack/Attack-3.png" id="3_ogpgs"]
+[ext_resource type="Texture2D" uid="uid://k41mfh7kmqb5" path="res://images/player/attack/Attack-4.png" id="4_spk56"]
+[ext_resource type="Texture2D" uid="uid://7ilhjaprld3e" path="res://images/player/attack/Attack-5.png" id="5_1yk18"]
+[ext_resource type="Texture2D" uid="uid://3oai5n4t1xl6" path="res://images/player/attack/Attack-6.png" id="6_b4o2o"]
+[ext_resource type="Texture2D" uid="uid://huljtou3ep5s" path="res://images/player/attack/Attack-7.png" id="7_yr3on"]
+[ext_resource type="Texture2D" uid="uid://d23el3tnodkcb" path="res://images/player/attack/Attack-8.png" id="8_2ngu4"]
+[ext_resource type="Texture2D" uid="uid://ctevvosl8c1tw" path="res://images/player/attack/Attack-9.png" id="9_jv5ih"]
+[ext_resource type="Texture2D" uid="uid://ddpqr7x07jwo8" path="res://images/player/attack/Attack-10.png" id="10_n36er"]
+[ext_resource type="Texture2D" uid="uid://cknusqpvklbct" path="res://images/player/attack/Attack-11.png" id="11_d745t"]
+[ext_resource type="Texture2D" uid="uid://cyhjavt6mycxh" path="res://images/player/attack/Attack-12.png" id="12_qc1tv"]
+[ext_resource type="Texture2D" uid="uid://11w5vx1rrlcm" path="res://images/player/attack/Attack-13.png" id="13_xe83n"]
+[ext_resource type="Texture2D" uid="uid://d2sycj77q66pk" path="res://images/player/idle/Idle-1.png" id="14_1yk18"]
+[ext_resource type="Texture2D" uid="uid://8bskt2r637ra" path="res://images/player/idle/Idle-2.png" id="15_b4o2o"]
+[ext_resource type="Texture2D" uid="uid://h3onucpbyavx" path="res://images/player/idle/Idle-3.png" id="16_yr3on"]
+[ext_resource type="Texture2D" uid="uid://bd2316janlywo" path="res://images/player/idle/Idle-4.png" id="17_2ngu4"]
+[ext_resource type="Texture2D" uid="uid://hhc3j86w5gxl" path="res://images/player/walking/Walking-1.png" id="18_2ngu4"]
+[ext_resource type="Texture2D" uid="uid://bmvr00c72d2xk" path="res://images/player/walking/Walking-2.png" id="19_jv5ih"]
+[ext_resource type="Texture2D" uid="uid://vyl0uq7t0tjj" path="res://images/player/walking/Walking-3.png" id="20_n36er"]
 
-[node name="player" type="Node2D" unique_id=1739084470]
+[sub_resource type="SpriteFrames" id="SpriteFrames_1crhd"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("1_5ki56")
+}, {
+"duration": 1.0,
+"texture": ExtResource("2_saib0")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3_ogpgs")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_spk56")
+}, {
+"duration": 1.0,
+"texture": ExtResource("5_1yk18")
+}, {
+"duration": 1.0,
+"texture": ExtResource("6_b4o2o")
+}, {
+"duration": 1.0,
+"texture": ExtResource("7_yr3on")
+}, {
+"duration": 1.0,
+"texture": ExtResource("8_2ngu4")
+}, {
+"duration": 1.0,
+"texture": ExtResource("9_jv5ih")
+}, {
+"duration": 1.0,
+"texture": ExtResource("10_n36er")
+}, {
+"duration": 1.0,
+"texture": ExtResource("11_d745t")
+}, {
+"duration": 1.0,
+"texture": ExtResource("12_qc1tv")
+}, {
+"duration": 1.0,
+"texture": ExtResource("13_xe83n")
+}],
+"loop": 1,
+"name": &"attack",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("14_1yk18")
+}, {
+"duration": 1.0,
+"texture": ExtResource("15_b4o2o")
+}, {
+"duration": 1.0,
+"texture": ExtResource("16_yr3on")
+}, {
+"duration": 1.0,
+"texture": ExtResource("17_2ngu4")
+}],
+"loop": 1,
+"name": &"idle",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("18_2ngu4")
+}, {
+"duration": 1.0,
+"texture": ExtResource("19_jv5ih")
+}, {
+"duration": 1.0,
+"texture": ExtResource("20_n36er")
+}],
+"loop": 1,
+"name": &"walking",
+"speed": 5.0
+}]
+
+[node name="player" type="CharacterBody2D" unique_id=71455304]
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=1186380586]
 sprite_frames = SubResource("SpriteFrames_1crhd")
+animation = &"walking"
+frame_progress = 0.51362205
