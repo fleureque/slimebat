@@ -8,5 +8,9 @@
 script = ExtResource("1_0wfyh")
 
 [node name="MainMenu" parent="." unique_id=119407722 instance=ExtResource("2_sugp2")]
+offset_left = -695.0
+offset_top = -358.0
+offset_right = 698.0
+offset_bottom = 359.0
 
 [node name="map" parent="." unique_id=898604451 instance=ExtResource("3_sugp2")]

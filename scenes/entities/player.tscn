@@ -1,6 +1,7 @@
 [gd_scene format=3 uid="uid://bmenk31tqjd6o"]
 
 [ext_resource type="Texture2D" uid="uid://da3e1nhaxm1dv" path="res://images/player/attack/Attack-1.png" id="1_5ki56"]
+[ext_resource type="Script" uid="uid://du6r7rakp0cx6" path="res://scenes/entities/player.gd" id="1_jv5ih"]
 [ext_resource type="Texture2D" uid="uid://0cqmll4u2p14" path="res://images/player/attack/Attack-2.png" id="2_saib0"]
 [ext_resource type="Texture2D" uid="uid://w2s7jqyw1idp" path="res://images/player/attack/Attack-3.png" id="3_ogpgs"]
 [ext_resource type="Texture2D" uid="uid://k41mfh7kmqb5" path="res://images/player/attack/Attack-4.png" id="4_spk56"]
@@ -99,9 +100,20 @@ animations = [{
 "speed": 5.0
 }]
 
-[node name="player" type="CharacterBody2D" unique_id=71455304]
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_1crhd"]
+radius = 39.0
+height = 262.0
 
-[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=1186380586]
+[node name="Player" type="CharacterBody2D" unique_id=71455304]
+script = ExtResource("1_jv5ih")
+
+[node name="PlayerSprite" type="AnimatedSprite2D" parent="." unique_id=1186380586]
+position = Vector2(0, 1)
 sprite_frames = SubResource("SpriteFrames_1crhd")
-animation = &"walking"
-frame_progress = 0.51362205
+animation = &"attack"
+frame = 4
+frame_progress = 0.36846024
+
+[node name="PlayerHitbox" type="CollisionShape2D" parent="." unique_id=232776940]
+position = Vector2(12, 38)
+shape = SubResource("CapsuleShape2D_1crhd")

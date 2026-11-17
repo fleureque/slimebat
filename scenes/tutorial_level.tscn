@@ -1,0 +1,31 @@
+[gd_scene format=4 uid="uid://bp4xln8s7mjcf"]
+
+[ext_resource type="Texture2D" uid="uid://c2egacm7oq6n4" path="res://images/textures/terrain.png" id="1_gk31l"]
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_nm3d5"]
+texture = ExtResource("1_gk31l")
+1:1/size_in_atlas = Vector2i(10, 10)
+1:1/0 = 0
+11:11/size_in_atlas = Vector2i(10, 10)
+11:11/0 = 0
+21:1/size_in_atlas = Vector2i(10, 10)
+21:1/0 = 0
+31:11/size_in_atlas = Vector2i(10, 10)
+31:11/0 = 0
+41:1/size_in_atlas = Vector2i(10, 10)
+41:1/0 = 0
+51:11/size_in_atlas = Vector2i(10, 10)
+51:11/0 = 0
+41:21/size_in_atlas = Vector2i(10, 10)
+41:21/0 = 0
+21:21/size_in_atlas = Vector2i(10, 10)
+21:21/0 = 0
+
+[sub_resource type="TileSet" id="TileSet_htge6"]
+sources/3 = SubResource("TileSetAtlasSource_nm3d5")
+
+[node name="TutorialLevel" type="Node2D" unique_id=235733391]
+
+[node name="TileMapLayer" type="TileMapLayer" parent="." unique_id=1218925986]
+tile_map_data = PackedByteArray("AAAEACcAAwABAAEAAAANACcAAwABAAEAAAAXACcAAwABAAEAAAAhACcAAwABAAEAAAArACcAAwABAAEAAAA1ACcAAwABAAEAAAA/ACcAAwABAAEAAABJACcAAwABAAEAAAA=")
+tile_set = SubResource("TileSet_htge6")
