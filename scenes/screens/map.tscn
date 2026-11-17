@@ -1,8 +1,10 @@
 [gd_scene format=3 uid="uid://b38w4kfvwvtj7"]
 
+[ext_resource type="Script" uid="uid://o8nn6mjgbqq" path="res://scenes/screens/map.gd" id="1_4nufn"]
 [ext_resource type="Texture2D" uid="uid://cg36a2v5xc48e" path="res://images/map/button_placeholder.png" id="1_c7s6e"]
 
 [node name="map" type="Node2D" unique_id=898604451]
+script = ExtResource("1_4nufn")
 
 [node name="Level1Button" type="TextureButton" parent="." unique_id=172780395]
 offset_left = 203.0
@@ -39,3 +41,5 @@ offset_bottom = 879.0
 scale = Vector2(0.2, 0.2)
 offset_transform_scale = Vector2(0.5, 0.5)
 texture_normal = ExtResource("1_c7s6e")
+
+[connection signal="pressed" from="Level1Button" to="." method="_on_level_1_button_pressed"]
