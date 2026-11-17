@@ -100,9 +100,8 @@ animations = [{
 "speed": 5.0
 }]
 
-[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_1crhd"]
-radius = 39.0
-height = 262.0
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_jv5ih"]
+size = Vector2(71, 259)
 
 [node name="Player" type="CharacterBody2D" unique_id=71455304]
 script = ExtResource("1_jv5ih")
@@ -111,9 +110,8 @@ script = ExtResource("1_jv5ih")
 position = Vector2(0, 1)
 sprite_frames = SubResource("SpriteFrames_1crhd")
 animation = &"attack"
-frame = 4
-frame_progress = 0.36846024
+autoplay = "idle"
 
 [node name="PlayerHitbox" type="CollisionShape2D" parent="." unique_id=232776940]
-position = Vector2(12, 38)
-shape = SubResource("CapsuleShape2D_1crhd")
+position = Vector2(12.5, 29.5)
+shape = SubResource("RectangleShape2D_jv5ih")

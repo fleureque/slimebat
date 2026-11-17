@@ -23,3 +23,12 @@ func _physics_process(delta: float) -> void:
 		velocity.x = move_toward(velocity.x, 0, SPEED)
 
 	move_and_slide()
+	
+func _process(delta):
+	var input_vector = Input.get_vector("move_left", "move_right", "move_up", "move_down")
+	
+	if input_vector != Vector2.ZERO:
+		$PlayerSprite.animation = "walking"
+		velocity = input_vector * SPEED
+	else:
+		$PlayerSprite.animation = "idle"
